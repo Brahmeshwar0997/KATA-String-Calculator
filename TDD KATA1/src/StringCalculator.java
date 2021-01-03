@@ -1,10 +1,7 @@
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
+ 
 public class StringCalculator {
  
-	Pattern p = Pattern.compile("[\\s@&.?$+-,://;\\n*!#%^()/{}]+");
-	static int count=0;
+ 	static int count=0;
 	public int Add(String numbers) throws MyException {
 		count=count+1;
 		numbers = numbers.replace("[", " ").replace("]", " ");
@@ -14,10 +11,11 @@ public class StringCalculator {
 		int sum = 0;
 		for (String string : terms) {
 			int num = 0;
-			if (!string.isEmpty()) {
+			if (!string.isEmpty() ) {
 				num = Integer.parseInt(string);
+				if(num<1000) {
  				sum = sum + num;
-
+				}
 			}
 			if (num < 0) {
 				throw new MyException("negatives not allowed");
