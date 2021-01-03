@@ -12,6 +12,7 @@ public class MainTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println(strcalc.GetCalledCount());
 	}
 
 }
